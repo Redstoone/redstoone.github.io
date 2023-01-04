@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <style>
+    .arjs-loader {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .arjs-loader div {
+      text-align: center;
+      font-size: 1.25em;
+      color: white;
+    }
+  </style>
+
+  <script src="./js/aframe.min.js"></script>
+  <script src="./js/aframe-ar.js"></script>
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+  <a-scene embedded arjs>
+    <a-marker preset="hiro">
+      <a-entity
+        position="0 0 0"
+        scale="0.05 0.05 0.05"
+        gltf-model="./scene.gltf"
+      ></a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+
+</html>
